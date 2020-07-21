@@ -1,0 +1,10 @@
+scp hbeat.py pi@raspberrypi.local:Desktop
+
+pip3 install adafruit-circuitpython-ads1x15
+
+https://healthmonitoring1200.firebaseio.com/
+
+
+https://sparklers-the-makers.github.io/blog/robotics/use-neo-6m-module-with-raspberry-pi/
+
+https://learn.adafruit.com/fona-tethering-to-raspberry-pi-or-beaglebone-black/setup
