@@ -1,0 +1,41 @@
+<!-- <div class="density-chooser">
+    <igx-buttongroup [values]="displayDensities" (onSelect)="selectDensity($event)"></igx-buttongroup>
+</div> -->
+
+<igx-input-group type="search" class="search">
+    <igx-prefix>
+        <igx-icon>search</igx-icon>
+    </igx-prefix>
+    <input #search igxInput placeholder="Search Patients" [(ngModel)]="searchpatient">
+    <igx-suffix *ngIf="search.value.length > 0" (click)="searchpatient = null">
+        <igx-icon>clear</igx-icon>
+    </igx-suffix>
+</igx-input-group>
+<button mat-raised-button color="primary" [routerLink]="['/addpatient']" class="buttonRight" >
+    <mat-icon>add</mat-icon>
+    Add Patient
+    </button>
+<div class="list-sample">
+    <igx-list [displayDensity]="density">
+        <igx-list-item isHeader="true">Patients
+
+        </igx-list-item>
+        <div   igxRippleTarget=".igx-list__item-content" *ngFor="let patient of patients | igxFilter: filterpatients;">
+
+        <igx-list-item (click)="click(patient)"  igxRipple igxRippleTarget=".igx-list__item-content" #item>
+            <igx-avatar igxListThumbnail [src]="image" roundShape="true"></igx-avatar>
+            
+            <span igxListLineSubTitle>ID:{{ patient._id }}</span>
+            <span igxListLineTitle style="color:blue">Name:{{ patient.patientname }}</span>
+            <span igxListLineSubTitle>Phone Number:{{ patient.phonenumber }}</span>
+            <span igxListLineSubTitle>Father Name:{{ patient.fathername }}</span>
+            <span igxListLineSubTitle>Address:{{ patient.address }}</span>
+            <span igxListLineSubTitle>Device ID:{{ patient.deviceid }}</span>
+            <span igxListLineSubTitle>Disease:{{ patient.disease }}</span>
+            <igx-icon igxListAction [color]="orange" (click)="toggleFavorite(patient)">delete</igx-icon>
+        </igx-list-item>
+    </div>
+
+
+    </igx-list>
+</div>

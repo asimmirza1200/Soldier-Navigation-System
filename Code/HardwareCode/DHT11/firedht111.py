@@ -3,7 +3,8 @@ from time import sleep
 import datetime
 from firebase import firebase
 import Adafruit_DHT
-
+import hashlib
+from getmac import get_mac_address
 import urllib2, urllib, httplib
 import json
 import os 
@@ -31,7 +32,7 @@ firebase = firebase.FirebaseApplication('https://healthmonitoring1200.firebaseio
 #firebase.put("/dht", "/humidity", "0.00")
 
 def update_firebase():
-
+    
     humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
     if humidity is not None and temperature is not None:
         #sleep(1)
@@ -43,15 +44,18 @@ def update_firebase():
             
     else:
         print('Failed to get reading. Try again!')  
-        sleep(2)
-
-    data = {"temp": temperature, "humidity": humidity,"time":currentDT.strftime("%Y-%m-%d %H:%M:%S")}
-    firebase.post('/sensor/dht', data)
+        sleep(1)
+    eth_mac = get_mac_address()
+    result = hashlib.md5(str(temperature)+eth_mac[0:7])
+    eth_mac_result = hashlib.md5(eth_mac)
+    print(eth_mac)
+    data = {"hash":result.hexdigest(),"temp": temperature, "humidity": humidity,"time":currentDT.strftime("%Y-%m-%d %H:%M:%S")}
+    firebase.post(eth_mac_result.hexdigest()+'/sensor/dht', data)
     
 
 while True:
         update_firebase()
         
         #sleepTime = int(sleepTime)
-        sleep(1)
+        sleep(5)
 
