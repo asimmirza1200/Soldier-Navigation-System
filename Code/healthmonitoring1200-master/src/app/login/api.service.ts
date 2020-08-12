@@ -16,7 +16,7 @@ export class ApiService {
    
     loginAdmin(admin) {
         let body = JSON.stringify(admin);
-        return this.http.post('http://localhost:3000/loginAdmin', body, httpOptions);
+        return this.http.post('https://healthmonitoring1200.herokuapp.com/loginAdmin', body, httpOptions);
     }
 
 }

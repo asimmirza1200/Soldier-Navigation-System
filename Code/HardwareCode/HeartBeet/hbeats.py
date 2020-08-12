@@ -17,7 +17,7 @@ if __name__ == '__main__':
      # initialization
      GAIN = 2/3
      curState = 0
-     thresh = 525 # mid point in the waveform
+     thresh = 500 # mid point in the waveform
      P = 512
      T = 512
      stateChanged = 0
@@ -70,7 +70,7 @@ if __name__ == '__main__':
                     runningTotal /= 10;
                     BPM = 6000/runningTotal;
                     f=open("guru99.txt", "w+")
-                    save=(BPM/2.5)
+                    save=(BPM)
                     f.write(""+str(save))
                     f.close()
                     print ('BPM: {}'.format(BPM))
@@ -81,7 +81,7 @@ if __name__ == '__main__':
                 P = thresh;
                 T = thresh;
             if N > 2500 : # if 2.5 seconds go by without a beat
-                 thresh = 512; # set thresh default
+                 thresh = 500; # set thresh default
                  P = 512; # set P default
                  T = 512; # set T default
                  lastBeatTime = sampleCounter; # bring the lastBeatTime up to date
@@ -92,4 +92,5 @@ if __name__ == '__main__':
                  t.close()
                  print ("no beats found")
             time.sleep(0.005)
+
 

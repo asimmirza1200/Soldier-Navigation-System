@@ -38,7 +38,7 @@ constructor(private toastrService: ToastrService,private angularFireMessaging: A
     this.currentMessage.next(msg);
        
     })
-
+}
     showNotification(from, align){
 
       const color =2;
