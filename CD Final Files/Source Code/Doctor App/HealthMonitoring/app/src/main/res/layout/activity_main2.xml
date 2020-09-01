@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".awesomefirebase.MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_top"
+        app:titleTextColor="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:minHeight="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+        >
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ListView
+        android:id="@+id/messages_list"
+        android:layout_below="@id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/messagw_layout"
+        android:layout_height="match_parent"
+        android:divider="@null"/>
+    <LinearLayout
+        android:id="@+id/messagw_layout"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:hint="Type a Message"
+            android:paddingLeft="10dp"
+            android:layout_margin="5dp"
+            android:id="@+id/new_message"
+            android:layout_weight="100"
+            android:layout_width="0dp"
+            android:background="@drawable/border_box"
+            android:layout_height="50dp"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/send_message"
+            android:tint="@color/white"
+            android:src="@android:drawable/ic_menu_send"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+</RelativeLayout>

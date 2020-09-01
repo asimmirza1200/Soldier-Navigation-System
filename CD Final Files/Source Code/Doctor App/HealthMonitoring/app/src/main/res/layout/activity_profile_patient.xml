@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.ProfileActivityPatient">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_top"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:minHeight="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+
+            >
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Patient Profile"
+                android:textSize="23dp"
+                android:layout_gravity="center"
+                android:textColor="#fff"
+                android:id="@+id/toolbar_title" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="2dp"
+        >
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/addmedicine"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5.5dp"
+            android:text="Add Medicine"
+            android:textColor="#fff"
+            android:textSize="10dp"
+            android:background="@drawable/background_selector"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="2dp"
+            android:src="@drawable/circle"
+            android:layout_gravity="center"/>
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/checkmedicine"
+            android:layout_marginTop="5.5dp"
+            android:text="Check Medicine"
+            android:textColor="#fff"
+            android:textSize="10dp"
+            android:background="@drawable/background_selector"/>
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        >
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:background="@drawable/background_selector"
+            android:text="Check Temperature"
+            android:textSize="10dp"
+            android:id="@+id/temp"
+            android:layout_marginBottom="10dp"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/ecg"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/background_selector"
+            android:text="Check ECG"
+            android:textSize="10dp"
+            android:textColor="#fff" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/heart"
+            android:layout_marginTop="0dp"
+            android:text="Check HeartBeat"
+            android:textColor="#fff"
+            android:textSize="10dp"
+            android:background="@drawable/background_selector"/>
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/checklocation"
+            android:layout_marginTop="0dp"
+            android:text="Current \n Location"
+            android:textColor="#fff"
+            android:textSize="10dp"
+            android:background="@drawable/background_selector"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="11.5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="17dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name:"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="21dp"
+                    android:textSize="11.3sp"/>
+
+                <TextView
+                    android:id="@+id/pname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="21dp"
+                    android:paddingBottom="15dp"
+                    android:text="Atif Mehmood"
+                    android:textStyle="bold"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="0dp"
+        android:paddingTop="11.5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#fff">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20dp"
+                android:orientation="vertical"
+                android:paddingTop="17dp"
+                android:paddingBottom="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="21dp"
+                    android:text="Father Name:"
+                    android:textSize="11.3sp" />
+
+                <TextView
+                    android:id="@+id/fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="21dp"
+                    android:paddingBottom="15dp"
+                    android:text="Muhammad Maskeen"
+                    android:textSize="14sp"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="11.5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="17dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Address:"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="21dp"
+                    android:textSize="11.3sp"/>
+
+                <TextView
+                    android:id="@+id/paddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="21dp"
+                    android:paddingBottom="15dp"
+                    android:text="Rawalpindi"
+                    android:textStyle="bold"
+
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="11.5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="17dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone Number:"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="21dp"
+                    android:textSize="11.3sp"/>
+
+                <TextView
+                    android:id="@+id/pphone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="21dp"
+                    android:paddingBottom="15dp"
+                    android:text="03075445663"
+                    android:textStyle="bold"
+
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="11.5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="17dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disease:"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="21dp"
+                    android:textSize="11.3sp"/>
+
+                <TextView
+                    android:id="@+id/pdisease"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="21dp"
+                    android:paddingBottom="15dp"
+                    android:text="Fever"
+                    android:textStyle="bold"
+
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="11.5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="17dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="21dp"
+                    android:textSize="11.3sp"/>
+
+                <TextView
+                    android:id="@+id/pdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="21dp"
+                    android:paddingBottom="15dp"
+                    android:text="27/3/2020"
+                    android:textStyle="bold"
+
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="0dp"
+        android:paddingTop="11.5dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:cardCornerRadius="15dp"
+            android:layout_margin="5dp"
+            android:elevation="3dp"
+            app:cardBackgroundColor="#fff">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="-20dp"
+                android:paddingTop="17dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device ID:"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="21dp"
+                    android:textSize="11.3sp"/>
+
+                <TextView
+                    android:id="@+id/pdeviceid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:paddingLeft="21dp"
+                    android:paddingBottom="15dp"
+                    android:text="2"
+                    android:textStyle="bold"
+
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+ </LinearLayout>
+</ScrollView>
+
+</LinearLayout>
+
+
+
+

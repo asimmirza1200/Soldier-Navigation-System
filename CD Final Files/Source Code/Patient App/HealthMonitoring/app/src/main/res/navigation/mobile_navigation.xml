@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.f.healthmonitoring.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_HomeFragment_to_HomeSecondFragment"
+            app:destination="@id/nav_home_second" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home_second"
+        android:name="com.f.healthmonitoring.ui.home.HomeSecondFragment"
+        android:label="@string/home_second"
+        tools:layout="@layout/fragment_home_second">
+        <action
+            android:id="@+id/action_HomeSecondFragment_to_HomeFragment"
+            app:destination="@id/nav_home" />
+
+        <argument
+            android:name="myArg"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_Patientdetail"
+        android:name="com.f.healthmonitoring.ui.PatientDetail.PatientDetailFragment"
+        android:label="@string/menu_patient_detail"
+        tools:layout="@layout/fragment_patient_detail"/>
+
+
+    <fragment
+        android:id="@+id/nav_EmergencyAlertNotification"
+        android:name="com.f.healthmonitoring.ui.AlertNotification.AlertNotificationFragment"
+        android:label="@string/menu_alert_notification"
+        tools:layout="@layout/fragment_alert_notification"/>
+
+
+    <fragment
+        android:id="@+id/nav_seeallldoctor"
+        android:name="com.f.healthmonitoring.ui.home.HomeFragment"
+        android:label="@string/menu_see_all_doctor"
+        tools:layout="@layout/fragment_see_all_doctor"/>
+
+    <fragment
+        android:id="@+id/nav_Seemedicineprescriptionlist"
+        android:name="com.f.healthmonitoring.ui.SeeMedicinePrescriptions.SeeMedicinePrescriptionsFragment"
+        android:label="@string/menu_see_medicine_prescription"
+        tools:layout="@layout/fragment_see_medicine_prescriptions"/>
+
+
+    <fragment
+        android:id="@+id/nav_Sendmessagetodoctor"
+        android:name="com.f.healthmonitoring.ui.SendMassage.SendMassageFragment"
+        android:label="@string/menu_send_massage"
+        tools:layout="@layout/fragment_send_massage"/>
+
+
+</navigation>

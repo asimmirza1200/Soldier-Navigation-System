@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.f.healthmonitoring">
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:name=".awesomefirebase.AwesomeFireBase"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Activities.ProfileActivityDoctor" />
+        <activity android:name=".Activities.SendMassageActivity" />
+
+        <activity
+            android:name=".Activities.SplashActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Activities.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateAlwaysHidden"
+
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activities.CheckTemperatureActivity"
+            android:screenOrientation="landscape"
+            />
+        <activity
+            android:screenOrientation="landscape"
+
+            android:name=".Activities.CheckHeartbeatActivity"
+           />
+        <activity
+            android:screenOrientation="landscape"
+
+            android:name=".Activities.CheckEcgActivity"
+            />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+        <service android:name=".awesomefirebase.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+         <activity android:name=".awesomefirebase.MainActivity"
+             android:theme="@style/AppTheme.NoActionBar"
+             android:parentActivityName=".Activities.MainActivity"
+             android:windowSoftInputMode="stateAlwaysHidden"
+             />
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "399971213782",
+    "firebase_url": "https://healthmonitoring1200.firebaseio.com",
+    "project_id": "healthmonitoring1200",
+    "storage_bucket": "healthmonitoring1200.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:399971213782:android:f8273e20b671d1b4344477",
+        "android_client_info": {
+          "package_name": "com.f.healthmonitoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "399971213782-6ohta8caougetmuriscph397pjjkt5ic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.f.healthmonitoring",
+            "certificate_hash": "3bb69358ecd4d03a3b701a2f438db71cdb63a915"
+          }
+        },
+        {
+          "client_id": "399971213782-j3e5l1s0jrchh0cv86hvatg8dt51vvcd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfeywGWm1sMr4_i7NVWtKMJMpUNh2y1XI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "399971213782-j3e5l1s0jrchh0cv86hvatg8dt51vvcd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
